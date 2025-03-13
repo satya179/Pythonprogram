@@ -1,0 +1,104 @@
+help('keywords')
+for num in range(1,151):
+   char=chr(num)
+   print(f"Number:{num},character:{char}")
+
+astr=input ()
+A= "and"
+B= "or"
+C= "xor"
+if(astr[1]=='A'):
+    print(int(astr[0]) & int(astr[2]))
+elif(astr[1]=='B'):
+    print(int(astr[0]) | int(astr[2]))
+elif(astr[1]=='C'):
+    print(int(astr[0]) ^ int(astr[2]))
+
+a=int(input())
+b=int(input())
+c=int(input())
+if a<b and a<c :
+   print("a is smaller")
+elif b<a and b<c:
+   print(" b is smaller")
+elif c<a and c<b:
+   print(" c is smaller")
+elif a==b and a<c:
+   print("a and b are equal and a,b are smaller ")
+elif a==c and a<b:
+   print("a and c are equal and a,c are smaller ")
+elif a==b and b==c :
+   print("a,b,c are equal")
+
+password=input()
+i=len(password)
+a=['@','#','&','_','-','+','*','/',')','(','!','?',';','.',',']
+if i<8:
+     print("invalid password...")
+else :
+  digit=False
+  upper=False
+  lower=False
+  sp=False
+  for i in password:
+     if i.isdigit():
+          digit=True
+     elif i.isupper():
+          upper=True
+     elif i.islower():
+          lower=True
+     elif i in a:
+          sp=True
+  if digit and upper and lower and sp:
+    print("valid password")
+  else :
+    print("invalid password")
+
+amount=int(input())
+f_n=amount//500
+r_n=amount%500
+print("Five Hundred Notes (500): ",+f_n)
+h_n=r_n//100
+r_n=r_n% 100
+print("One Hundred Notes (100):",+h_n)
+fy_n=r_n//50
+r_n=r_n%50
+print("Fifty Rupee Notes (50):",+fy_n)
+t_n=r_n//10
+r_n=r_n%10
+print("Ten Rupee Notes (10):",+t_n)
+
+a=input()
+print("_".join(a))
+
+m=int(input())
+if m>2 and m<=5 :
+  print("Summer")
+if m>=6 and m<=9 :
+   print("rainy")
+if m>=10 and m<=11 :
+   print("autumn")
+if m>=12 and m<=2 :
+   print("winter")
+
+a=int(input())
+o=input()
+b=int(input())
+if o== '+':
+  print(a+b)
+elif o=='-':
+   print(a-b)
+elif o=='*':
+   print(a*b)
+elif o=='/':
+   print(a/b)
+elif o=='%':
+   print(a%b)
+elif o=='//':
+   print(a//b)
+elif o=='**':
+   print(a**b)
+
+a=input()
+print(a[::-1])
+
